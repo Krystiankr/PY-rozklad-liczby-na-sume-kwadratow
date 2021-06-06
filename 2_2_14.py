@@ -37,6 +37,10 @@ l_glowna = set(tuple(element) for element in l_glowna)
 
 for i,el in enumerate(sorted(l_glowna),start=1):
     print(f'{n} = ' , end= '')
-    for item in el:
-        print(f'+ {int(item**(1/2))}^2', end=' ')
+    for j,item in enumerate(el, start = 1):
+        if j==1:
+            print(f'{int(item**(1/2))}^2', end='')
+        else:
+            print(f' + {int(item**(1/2))}^2' , end=' ')
+            
     print()
