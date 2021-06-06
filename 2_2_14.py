@@ -14,9 +14,8 @@ def foo(n, l_glowna):
             tmp.remove(1)    
         l_glowna.append(tmp.copy())
 
-
 l_glowna: List[int] = []
-n=113
+n=34
 l_jedynki: List[int] = []
 for i in range(n):
     l_jedynki.append(1)
@@ -33,12 +32,11 @@ while l_tmp.count(1)>=4:
                 for _ in range(4):
                     l_tmp.remove(1)                                
                 l_glowna.append(l_tmp.copy()) 
-l_glowna.append(nastepny(n))
-l_glowna.append([n])
-
-nastepny(25)
 
 l_glowna = set(tuple(element) for element in l_glowna)
 
 for i,el in enumerate(sorted(l_glowna),start=1):
-    print(f'i={i}  =  {el}')
+    print(f'{n} = ' , end= '')
+    for item in el:
+        print(f'+ {int(item**(1/2))}^2', end=' ')
+    print()
