@@ -9,7 +9,6 @@ def foo(lista, main, squares):
             replace(tmp, el, main)
             foo(tmp, main,squares)
            
-        
 def replace(lista, el, main):
     if lista.count(1) >= el:
         lista.append(el)
@@ -19,9 +18,7 @@ def replace(lista, el, main):
         main.append(lista)
 
 n = 34
-ones = np.ones(n).astype('int')
-ones = list(ones)
-ones.count(1)
+ones = list(np.ones(n).astype('int'))
 squares = [x**2 for x in range(n) if x**2 < n and x**2>1]
 main = [ones]
         
